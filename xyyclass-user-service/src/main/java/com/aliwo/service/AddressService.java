@@ -1,7 +1,6 @@
 package com.aliwo.service;
 
 import com.aliwo.model.AddressDO;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
@@ -11,6 +10,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xuyy
  * @since 2021-06-04
  */
-public interface AddressService extends IService<AddressDO> {
+public interface AddressService {
+    AddressDO getAddressById(Long id);
 
 }

@@ -3,7 +3,8 @@ package com.aliwo.service.impl;
 import com.aliwo.model.AddressDO;
 import com.aliwo.mapper.AddressMapper;
 import com.aliwo.service.AddressService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +16,12 @@ import org.springframework.stereotype.Service;
  * @since 2021-06-04
  */
 @Service
-public class AddressServiceImpl extends ServiceImpl<AddressMapper, AddressDO> implements AddressService {
+public class AddressServiceImpl implements AddressService {
+    @Autowired
+    private AddressMapper addressMapper;
 
+    @Override
+    public AddressDO getAddressById(Long id) {
+        return addressMapper.selectOne(new QueryWrapper<AddressDO>().eq("id", id));
+    }
 }

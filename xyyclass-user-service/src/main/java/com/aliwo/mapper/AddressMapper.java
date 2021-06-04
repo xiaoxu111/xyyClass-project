@@ -2,6 +2,7 @@ package com.aliwo.mapper;
 
 import com.aliwo.model.AddressDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author xuyy
  * @since 2021-06-04
  */
+@Mapper
 public interface AddressMapper extends BaseMapper<AddressDO> {
 
 }

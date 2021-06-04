@@ -1,7 +1,5 @@
 package com.aliwo.service;
 
-import com.aliwo.model.UserDO;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
@@ -11,6 +9,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xuyy
  * @since 2021-06-04
  */
-public interface UserService extends IService<UserDO> {
+public interface UserService {
 
 }
